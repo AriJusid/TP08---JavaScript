@@ -6,11 +6,46 @@
     <title>Document</title>
 </head>
 <body>
-    <div con id=”resultado”>
-        
-    </div>
-    <script src="js/ejercicios.js"></script>
-    <script src="js/utils.js"></script>
+    <div id="resultado"></div>
 
+    <script>
+        // Comparando datos y tipos
+        let comparaciones = `
+            10 == '10' es ${10 == '10'}<br>
+            10 === '10' es ${10 === '10'}<br>
+            Tipo de 10.6 es ${typeof 10.6}<br>
+            true == 1 es ${true == 1}<br>
+            true === 1 es ${true === 1}<br>
+        `;
+        document.getElementById('resultado').innerHTML += `Comparando datos y tipos:<br>${comparaciones}`;
+
+        // Filtrar nombres que comienzan con 'A' y mostrarlos en el DOM
+        let nombres = prompt("Ingresa una lista de nombres separados por coma:");
+        let nombresArray = nombres.split(',');
+        let nombresConA = [];
+
+        for (let i = 0; i < nombresArray.length; i++) {
+            let nombre = nombresArray[i].trim();
+            if (nombre.charAt(0).toLowerCase() === 'a') {
+                nombresConA.push(nombre);
+            }
+        }
+
+        document.getElementById('resultado').innerHTML += "Nombres que comienzan con 'A':<br>";
+        for (let i = 0; i < nombresConA.length; i++) {
+            document.getElementById('resultado').innerHTML += `${nombresConA[i]}<br>`;
+        }
+
+        // Doble de elementos
+        function duplicarElementos(array) {
+            return array.map(function(numero) {
+                return numero * 2;
+            });
+        }
+
+        let numeros = [1, 2, 3, 4, 5];
+        let numerosDuplicados = duplicarElementos(numeros);
+        document.getElementById('resultado').innerHTML += `Números duplicados: ${numerosDuplicados.join(', ')}<br>`;
+    </script>
 </body>
 </html>

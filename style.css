@@ -1,0 +1,26 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.mb-3{
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow: 20px 20px 60px #bebebe,
+                  -20px -20px 60px #ffffff;
+    margin: 2%;
+    input{
+        margin-bottom: 5%;
+    }
+    button{
+        margin-bottom: 2%;
+    }
+}
+.ingresos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

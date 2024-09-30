@@ -69,7 +69,6 @@ resultadoDiv.innerHTML += "true === 1: " + (true === 1) + " <br> <br>";
 
 // Triángulo de asteriscos centrado 
 function dibujarTrianguloCentrado(filas) {
-    console.log("Triángulo centrado:");
     for (let i = 1; i <= filas; i++) {
         let espacios = ' '.repeat(filas - i);  
         let asteriscos = '*'.repeat(2 * i - 1);
@@ -79,7 +78,6 @@ function dibujarTrianguloCentrado(filas) {
 
 // Triángulo de asteriscos simple 
 function dibujarTrianguloSimple(filas) {
-    console.log("Triángulo simple:");
     for (let i = 1; i <= filas; i++) {
         console.log('*'.repeat(i));  
     }
@@ -107,7 +105,7 @@ let nombre = prompt("¿Cuál es tu nombre?");
 let fechaNacimiento = prompt("Ingresa tu fecha de nacimiento (YYYY-MM-DD)");
 
 let edad = calcularEdad(fechaNacimiento);
-resultadoDiv.innerHTML += `Hola ${nombre}, tienes ${edad} años!<br>`;
+resultadoDiv.innerHTML += `Hola ${nombre}, tenés ${edad} años!<br>`;
 
 // Filtrar nombres que comienzan con 'A' y mostrarlos en el DOM
 let nombres = prompt("Ingrese una lista de nombres separados por coma:");

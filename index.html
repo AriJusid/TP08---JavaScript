@@ -7,17 +7,29 @@
 </head>
 <body>
     <div id="resultado"></div>
-    <!--1-->
+    <!--Calc Recaudacion-->
     <div class="mb-3">
         <input type="text" class="form-control" id="frase" placeholder="Ingrese dato:valor, dato:valor">
         <button type="button" onclick="calRecaudacion()" class="btn btn-primary" id="btn">Eviar</button>
-        <h3 id = "r">Total</h3>
+        <h3 id = "r">Total: </h3>
     </div>
 
-    <!--2-->
+    <!--Remplazar Palabras-->
     <div class="mb-3">
-        <h3 id = "re">Ciudad</h3>
+            Ingrese una frase <input type="text" id="completa">
+            Palabra a remplazar <input type="text" id="palabraRemplazar">
+            Palabra a agregar <input type="text" id="remplazo">
+            <button onclick="remplazar()">Enviar</button>
+        <h3 id = "re">Nueva Frase:  </h3>
     </div>
+    <!--Cortar Tetxo-->
+    Ingrese una frase <input type="text" id="cadena">
+    Ingrese la posicion en la que quiere cortar el texto <input type="number" id="cortar">
+    <button onclick="cortar()">Enviar</button>
+
+    <h3 id = "res">Frase Cortada:  </h3>
+    <div id="resultado"></div> 
+
     <script src="js/ejercicios.js"></script>
 </body>
 </html>
